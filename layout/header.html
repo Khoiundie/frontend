@@ -1,0 +1,194 @@
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+	integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+/>
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+	integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+/>
+<link rel="stylesheet" href="./css/style.css" />
+<header id="site-header">
+	<div style="background-color: #2b406f;" class="d-flex justify-content-center">
+		<div class="d-flex align-content-center gap-3">
+			<div class="w-100 m-auto banner-wrapper" style="max-width: 900px; overflow: hidden;" > 
+				<ul class="d-flex flex-nowrap align-items-center  banner-list" style="white-space: nowrap;">
+					<li class="me-4 d-flex gap-1 align-items-center" style="display: inline-block; white-space: nowrap">
+						<i class="fa-solid fa-arrows-turn-to-dots my-2"></i>
+						Thu cũ giá ngon - <b>Lên đời</b> tiết kiệm
+					</li>
+					<li class="me-4 d-flex gap-1 align-items-center" style="display: inline-block; white-space: nowrap">
+						<i class="fa-solid fa-medal my-2"></i>
+						Sản phẩm <b>Chính hãng - Xuất VAT</b> đầy đủ Giao nhanh
+					</li>
+					<li class="me-4 d-flex gap-1 align-items-center" style="display: inline-block; white-space: nowrap">
+						<i class="fa-solid fa-truck-fast my-2"></i>
+						<b>Giao nhanh - Miễn phí</b> cho đơn 300k
+					</li>
+					<li class="me-4 d-flex gap-1 align-items-center" style="display: inline-block; white-space: nowrap">
+						<i class="fa-solid fa-arrows-turn-to-dots my-2"></i>
+						Thu cũ giá ngon - <b>Lên đời</b> tiết kiệm
+					</li>
+					<li class="me-4 d-flex gap-1 align-items-center" style="display: inline-block; white-space: nowrap">
+						<i class="fa-solid fa-medal my-2"></i>
+						Sản phẩm <b>Chính hãng - Xuất VAT</b> đầy đủ Giao nhanh
+					</li>
+					<li class="me-4 d-flex gap-1 align-items-center" style="display: inline-block; white-space: nowrap">
+						<i class="fa-solid fa-truck-fast my-2"></i>
+						<b>Giao nhanh - Miễn phí</b> cho đơn 300k
+					</li>
+				</ul>
+				
+			</div>
+			<div class="d-flex gap-4 align-items-center">
+				<div class="text-white d-flex gap-2 header_banner-btn">
+					<i class="bi bi-newspaper"></i>
+					<a href="">Tra cứu đơn hàng</a>
+				</div>
+				<div class="text-white d-flex gap-2 header_banner-btn">
+					<i class="fa-solid fa-phone-volume phone-ring" style="margin-top: 0.1rem;"></i>
+					<a href="">1800 2097</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar_section">
+		<div class="header_pc align-items-center">
+			<div class="header_pc-item header-col header-col--logo">
+				<div class="site_logo overflow-hidden">
+					<a href="#/" title="Code mau" class="">
+						<img src="img/logo_rmbgnew.png" alt="logo" />
+					</a>
+				</div>
+			</div>
+			<!-- Danh mục -->
+			<a href="#/products" class="header_pc-item categories_nav">
+				<i class="fa-solid fa-layer-group"></i>
+				<span>Sản Phẩm</span>
+			</a>
+			<!-- Địa chỉ -->
+			<div class="header_pc-item location_nav">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Thành Phố HCM</span>
+			</div>
+			<!-- tìm kiếm -->
+			<div class="header_pc-item find-input_nav gap-2 position-relative">
+				<i class="fa-solid fa-magnifying-glass"></i>
+				<input type="text" class="form-control" id="find_input" oninput="searchProduct()" onclick="overlayControll()" />
+				<div class="find_container arrow position-absolute" id="findContainerArrow"></div>
+				<div class="find_container content-box position-absolute" id="findContainerContent">
+					<div id="resultList"></div>
+				</div>
+			</div>
+
+			<!-- Giỏ hàng -->
+			<a href="#/cart" class="header_pc-item cart_nav">
+				<span>Giỏ hàng</span>
+				<i class="fa-solid fa-cart-shopping"></i>
+				<span id="number">0</span>
+			</a>
+			<!-- Đăng nhập -->
+			<a href="#/login" class="header_pc-item login_nav">
+				<span>Đăng Nhập</span>
+				<i class="fa-solid fa-user"></i>
+			</a>
+		</div>
+		<div class="nav_overlay" id="nav_overlay"></div>
+	</div>
+	<section id="categories_container" class="mt-2">
+		<div class="left_container">
+			<div class="member_sale-info mt-2 d-flex flex-column gap-3">
+				<div class="member_sale-info d-flex gap-2">
+					<div class="logo" style=""><img src="./img/techstore_menber.png" alt=""></div>
+					<div class="text"><h4>Chào mừng bạn đến với TechStore</h4></div>
+				</div>
+				<li style="list-style: none;">
+					<a href="" class="d-flex gap-2 px-">	
+						<span style="font-size: 12px;"></span>
+					</a>
+				</li>
+			</div>
+			<ul>
+				<li class="d-flex g-5 align-content-center">
+					<i class="fa-solid fa-gift"></i><a href="">Ưu đãi hội viện TechStore</a>
+				</li>
+				<li class="d-flex g-5 align-content-center">
+					<i class="fa-solid fa-mobile"></i><a href="">Điện Thoại</a>,<a href=""
+						>Taplet</a
+					>
+				</li>
+				<li class="d-flex g-5 align-content-center">
+					<i class="fa-solid fa-laptop"></i>
+					<a href="">Laptop</a>
+				</li>
+
+				<li class="d-flex g-5 align-content-center">
+					<i class="fa-solid fa-headphones"></i>
+					<a href="">Âm thanh</a>
+				</li>
+				<li class="d-flex g-5 align-content-center">
+					<i class="fa-solid fa-charging-station"></i>
+					<a href="">Phụ kiện</a>
+				</li>
+				<li class="d-flex g-5 align-content-center">
+					<i class="fa-solid fa-desktop"></i>
+					<a href="">PC</a>,
+					<a href="">màng hình</a>
+				</li>
+				<li class="d-flex g-5 align-content-center">
+					<i class="fa-regular fa-percent"></i>
+					<a href="">Khuyến mãi</a>
+				</li>
+				<li class="d-flex g-5 align-content-center">
+					<i class="fa-solid fa-newspaper"></i>
+					<a href="">Tin Công nghệ</a>
+				</li>
+			</ul>
+			
+		</div>
+		<div class="right_container d-flex gap-2">
+			<div class="d-flex flex-column gap-1 align-items-center justify-content-center">
+				<div class="d-flex justify-content-start slide-banner rounded-2" style="max-width: 700px;">
+					<ul class="flex-row" style="max-width: 700px; flex-wrap: nowrap;">
+						<li class="w-100 h-100 p-0"><img src="./img/bannerSide/navBanner_1.webp" alt="" class="" style="min-width: 700px;"></li>
+						<li class="w-100 h-100 p-0"><img src="./img/bannerSide/navBanner_2.webp" alt="" class="" style="min-width: 700px;"></li>
+						<li class="w-100 h-100 p-0"><img src="./img/bannerSide/navBanner_3.webp" alt="" class="" style="min-width: 700px;"></li>
+						<li class="w-100 h-100 p-0"><img src="./img/bannerSide/navBanner_4.webp" alt="" class="" style="min-width: 700px;"></li>
+						<li class="w-100 h-100 p-0"><img src="./img/bannerSide/navBanner_5.webp" alt="" class="" style="min-width: 700px;"></li>
+					</ul>
+				</div>
+				<div class="d-flex justify-content-center align-items-center">
+					<ul class="d-flex row small_banner" style="max-width: 700px; flex-wrap: nowrap;">
+						<li class="rounded-2 overflow-hidden"><img src="./img/bannerSide/smallBanner_1.webp" alt=""></li>
+						<li class="rounded-2 overflow-hidden"><img src="./img/bannerSide/smallBanner_2.webp" alt=""></li>
+						<li class="rounded-2 overflow-hidden"><img src="./img/bannerSide/smaillBanner_3.webp" alt=""></li>
+					</ul>
+				</div>
+			</div>
+			<div class="w-100 rounded-2 overflow-hidden" style="background-color: #bfd7fe;">
+				<div class="w-100 categories_sale-ads--container d-flex flex-column gap-2">
+					<div class="w-100 title">Ưu Đãi Cho Giáo dục</div>
+					<ul class="sale_price-brand d-flex gap-1 flex-column">
+						<li class="d-flex align-items-center gap-1"><i class="fa-solid fa-graduation-cap my-2" style="color: #1c3d74;"></i><span>Đăng ký <b>nhận ưu đãi</b></span></li>
+						<li class="d-flex align-items-center gap-1"><i class="fa-solid fa-graduation-cap my-2" style="color: #1c3d74;"></i><span>Tựu trường lên cấp - <b> máy mới lên đời</b> </span></li>
+						<li class="d-flex align-items-center gap-1"><i class="fa-solid fa-graduation-cap my-2" style="color: #1c3d74;"></i><span>Laptop <b> giảm lên đến 1.000.000đ</b></span></li>
+					</ul>
+				</div>
+				<div class="w-100 categories_sale-ads--container d-flex flex-column gap-2">
+					<div class="w-100 title">Thu cũ lên đời giá hời</div>
+					<ul class="sale_price-brand d-flex gap-1 flex-column">
+						<li class="d-flex align-items-center gap-1"><i class="fa-solid fa-arrows-turn-to-dots my-2" style="color: #1c3d74;"></i><span>Iphone trợ giá <b>đến 5tr</b> </span></li>
+						<li class="d-flex align-items-center gap-1"><i class="fa-solid fa-arrows-turn-to-dots my-2" style="color: #1c3d74;"></i><span> Xiaomi trợ giá <b>đến 5tr</b> </span> </li>
+						<li class="d-flex align-items-center gap-1"><i class="fa-solid fa-arrows-turn-to-dots my-2" style="color: #1c3d74;"></i><span>SamSung trợ giá <b> lên đến 4tr</b></span> </li>
+						<li class="d-flex align-items-center gap-1"><i class="fa-solid fa-arrows-turn-to-dots my-2" style="color: #1c3d74;"></i><span>Latop trợ giá <b>lên đén 3tr</b></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+</header>

@@ -1,0 +1,38 @@
+.cart_item {
+	background-color: white;
+	border: 1px solid rgba(111, 111, 111, 0.229);
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+.cart_item-quantity {
+	/* padding: 1rem;
+	border: 1px solid black;
+	border-radius: 1rem; */
+}
+.edit_quantity {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin: 0.5rem 0;
+}
+.cart_item-log {
+	max-width: 100px;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.plus_btn ,
+.minus_btn {
+	width: 30px;
+	height: 30px;
+	border-radius: 0.2rem;
+	font-size: 1rem;
+	color: rgba(45, 45, 45, 0.533);
+	background-color: rgba(72, 72, 72, 0.088);
+}
+.plus_btn:hover ,
+.minus_btn:hover{
+	background-color: rgba(49, 49, 49, 0.088);
+	color: black;
+}

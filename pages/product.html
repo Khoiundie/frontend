@@ -1,0 +1,151 @@
+<section id="prodcut-page-1">
+	<section id="filter" class="d-flex flex-column gap-2">
+		<h1 class="filter_title fs-4 p-2">Lọc theo tiêu chí</h1>
+		<div class="filter_container">
+			<ul class="d-flex gap-2">
+				<li class="filter_first filter_item d-flex align-items-center gap-2 p-2">
+					<i class="bi bi-funnel-fill"></i>
+					<span>Bộ lọc</span>
+					<span class="arrow">&rsaquo;</span>
+				</li>
+				<li
+					class="filter_item d-flex align-items-center gap-2 p-2"
+					id="new_product"
+				>
+					<i class="fa-solid fa-cart-plus"></i>
+					<span>Hàng mới về</span>
+					<span class="arrow">&rsaquo;</span>
+				</li>
+				<li
+					class="filter_item d-flex align-items-center gap-2 p-2"
+					id="filter_btn-price"
+				>
+					<i class="fa-solid fa-money-bill"></i>
+					<span>Lọc theo giá</span>
+					<span class="arrow">&rsaquo;</span>
+					<div class="price-filter__container" id="price-filter">
+						<p>Hãy chọn mức giá phù hợp với bạn</p>
+						<div class="price-filter__inputs">
+							<input
+								type="text"
+								class="price-filter__input"
+								id="min-price"
+								value="0đ"
+							/>
+							<input
+								type="text"
+								class="price-filter__input"
+								id="max-price"
+								value="63.990.000đ"
+							/>
+						</div>
+
+						<div class="price-filter__slider-container">
+							<div class="price-filter__track"></div>
+							<div class="price-filter__range" id="slider-range"></div>
+							<input
+								type="range"
+								class="price-filter__slider"
+								id="range-min"
+								min="0"
+								max="63990000"
+								value="0"
+								step="100000"
+							/>
+							<input
+								type="range"
+								class="price-filter__slider"
+								id="range-max"
+								min="0"
+								max="63990000"
+								value="63990000"
+								step="100000"
+							/>
+						</div>
+
+						<div class="price-filter__actions">
+							<button class="price-filter__btn price-filter__btn-close">
+								Đóng
+							</button>
+							<button
+								class="price-filter__btn price-filter__btn-apply"
+								id="apply"
+							>
+								Xem kết quả
+							</button>
+						</div>
+					</div>
+				</li>
+				<li class="filter_item d-flex align-items-center gap-2 p-2 position-relative" id="filter_category">
+					<span id="filter_category-btn">Lọc theo loại</span>
+					<span class="arrow">&rsaquo;</span>
+					<div class="category_phone position-absolute" id="category_product">
+						<div class="d-flex flex-wrap gap-2 mb-3">
+							<div class="android_category category_tag" id="android">Android</div>
+							<div class="ios_category category_tag" id="ios">Iphone(ios)</div>
+							<div class="mac_category category_tag" id="mac">Mac</div>
+							<div class="window_category category_tag" id="window">Window</div>
+						</div>
+						<div class="show-category-result">
+							<button id="back_btn-category">Trở lại</button>
+							<button id="show_result-category">Xem kết quả</button>
+						</div>
+					</div>
+				</li>
+				<li class="filter_last filter_item d-flex align-items-center gap-2 p-2" id="filter_ramrom">
+					<span id="filter_ramrom-btn">Lọc theo ram</span>
+					<span class="arrow">&rsaquo;</span>
+					<div class="category_ramrom position-absolute" id="category_ramrom">
+						<div class="d-flex flex-column gap-2 w-100">
+							<div class="d-flex flex-column flex-wrap gap-2 mb-3">
+								<h4>RAM | ROM Điện thoại</h4>
+								<div class="d-flex gap-2">
+									<div class="mac_category category_tag" id="mac">6GB | 64GB</div>
+									<div class="window_category category_tag" id="window">12GB | 128GB</div>
+								</div>
+							</div>
+							<div class="d-flex flex-wrap flex-column gap-2 mb-3">
+								<h4>RAM | ROM laptop</h4>
+								<div class="d-flex gap-2">
+									<div class="mac_category category_tag" id="mac">16GB | 512GB</div>
+									<div class="window_category category_tag" id="window">32GB | 1TB</div>
+								</div>
+							</div>
+							<div class="show-category-result w-100 d-flex justify-content-between">
+								<button id="back_btn-ramrom">Trở lại</button>
+								<button id="show_result-ramrom">Xem kết quả</button>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="soft_container">
+			<h1 class="soft_title fs-4 p-2">Sắp xếp theo</h1>
+			<ul>
+				<li
+					class="filter_item d-flex align-items-center gap-2 p-2 active"
+					id="promotion_btn">
+					<i class="bi bi-percent"></i>
+					<span>Khuyến mãi</span>
+				</li>
+				<li
+					class="filter_item d-flex align-items-center gap-2 p-2"
+					id="soft_asc">
+					<i class="bi bi-sort-up-alt"></i>
+					<span>Giá thấp - cao</span>
+				</li>
+				<li
+					class="filter_item d-flex align-items-center gap-2 p-2"
+					id="soft_desc">
+					<i class="bi bi-sort-down"></i>
+					<span>Giá Cao - thấp</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section
+		id="product-page"
+		class="d-flex gap-2 accordion-body container"
+	></section>
+</section>

@@ -1,0 +1,175 @@
+
+/* ========== box sizing ========== */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/* ========== Remove default spacing ========== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-size: 100%;
+	font-family: inherit;
+}
+
+/* ========== Basic html/body setup ========== */
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: var(--base-font-size);
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	line-height: var(--base-line-height);
+	color: var(--text-color);
+	background-color: var(--bg-color);
+	font-family: var(--base-font-family);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* ========== Headings (để developer tuỳ chỉnh) ========== */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+/* ========== Links ========== */
+a {
+	color: inherit;
+	text-decoration: none;
+	background-color: transparent;
+}
+a:focus, a:active { outline: none; }
+
+/* ========== Lists ========== */
+ol, ul {
+	list-style: none;
+}
+
+/* ========== Images & media ========== */
+img, picture, svg, video, canvas {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+}
+
+/* ========== Tables ========== */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ========== Forms (inputs, buttons, selects, textarea) ========== */
+/* Remove inconsistent inner spacing in form elements */
+input, button, textarea, select {
+	font: inherit;
+	color: inherit;
+	background: none;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	resize: none;
+}
+
+/* Provide sensible defaults for buttons */
+button {
+	cursor: pointer;
+	background-color: transparent;
+	padding: 0;
+}
+
+/* Inputs accessibility + visible focus using :focus-visible */
+:focus {
+	outline: none;
+}
+:focus-visible {
+	outline: var(--focus-outline);
+	outline-offset: 2px;
+}
+
+/* Native form controls fallback visuals */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+}
+
+/* ========== Placeholder styling ========== */
+::placeholder {
+	color: rgba(0,0,0,0.35);
+	opacity: 1;
+}
+
+/* ========== Accessibility helpers ========== */
+/* Visually hidden (for screen readers) */
+.sr-only {
+	position: absolute !important;
+	height: 1px; width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+	border: 0; padding: 0; margin: -1px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ========== Utility sensible defaults ========== */
+/* Make images and videos responsive by default */
+.media-responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Make content containers inherit fonts */
+.container, main, header, footer, section, article, nav {
+	display: block;
+}
+
+/* Ensure root-level flex/grid won't overflow unexpectedly */
+:root, html, body {
+	min-width: 320px;
+}
+
+/* ========== Print friendly ========== */
+@media print {
+  * { color: #000 !important; background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+	a::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+}
+
+/* ========== Optional: small helper to restore native styles when cần ========== */
+/* Add class .native to an element to get browser default controls back */
+.native {
+	all: revert;
+}

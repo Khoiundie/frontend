@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - TechStore</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../img/logo_rmbg.png" alt="TechStore Logo">
+                <h2>TechStore Admin</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active" data-tab="dashboard" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 0.2rem;">
+                        <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M19 11C19.5046 10.9998 19.9906 11.1904 20.3605 11.5335C20.7305 11.8766 20.9572 12.3468 20.995 12.85L21 13V19C21.0002 19.5046 20.8096 19.9906 20.4665 20.3605C20.1234 20.7305 19.6532 20.9572 19.15 20.995L19 21H15C14.4954 21.0002 14.0094 20.8096 13.6395 20.4665C13.2695 20.1234 13.0428 19.6532 13.005 19.15L13 19V13C12.9998 12.4954 13.1904 12.0094 13.5335 11.6395C13.8766 11.2695 14.3468 11.0428 14.85 11.005L15 11H19ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V7C21 7.53043 20.7893 8.03914 20.4142 8.41421C20.0391 8.78929 19.5304 9 19 9H15C14.4696 9 13.9609 8.78929 13.5858 8.41421C13.2107 8.03914 13 7.53043 13 7V5C13 4.46957 13.2107 3.96086 13.5858 3.58579C13.9609 3.21071 14.4696 3 15 3H19Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 3C9.53043 3 10.0391 3.21071 10.4142 3.58579C10.7893 3.96086 11 4.46957 11 5V11C11 11.5304 10.7893 12.0391 10.4142 12.4142C10.0391 12.7893 9.53043 13 9 13H5C4.46957 13 3.96086 12.7893 3.58579 12.4142C3.21071 12.0391 3 11.5304 3 11V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9Z" fill="white"/>
+                        <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M9 15C9.53043 15 10.0391 15.2107 10.4142 15.5858C10.7893 15.9609 11 16.4696 11 17V19C11 19.5304 10.7893 20.0391 10.4142 20.4142C10.0391 20.7893 9.53043 21 9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V17C3 16.4696 3.21071 15.9609 3.58579 15.5858C3.96086 15.2107 4.46957 15 5 15H9Z" fill="white"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </li>
+                <li class="nav-item" data-tab="products" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg class="icon-no-fill" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-top: 0.4rem; fill: none !important;">
+                        <g filter="url(#filter0_d_1376_34198)">
+                        <path d="M25 7L15 2L5 7V17L15 22L25 17V7Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M5 7L15 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 22V12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25 7L15 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 4.5L10 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_d_1376_34198" x="-1" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1376_34198"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1376_34198" result="shape"/>
+                        </filter>
+                        </defs>
+                    </svg>
+
+                    <span>Sản phẩm</span>
+                </li>
+                <li class="nav-item" data-tab="orders" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 0.1rem;">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.586 4.586C5 5.172 5 6.114 5 8V17C5 18.886 5 19.828 5.586 20.414C6.172 21 7.114 21 9 21H15C16.886 21 17.828 21 18.414 20.414C19 19.828 19 18.886 19 17V8C19 6.114 19 5.172 18.414 4.586C17.828 4 16.886 4 15 4H9C7.114 4 6.172 4 5.586 4.586ZM9 8C8.73478 8 8.48043 8.10536 8.29289 8.29289C8.10536 8.48043 8 8.73478 8 9C8 9.26522 8.10536 9.51957 8.29289 9.70711C8.48043 9.89464 8.73478 10 9 10H15C15.2652 10 15.5196 9.89464 15.7071 9.70711C15.8946 9.51957 16 9.26522 16 9C16 8.73478 15.8946 8.48043 15.7071 8.29289C15.5196 8.10536 15.2652 8 15 8H9ZM9 12C8.73478 12 8.48043 12.1054 8.29289 12.2929C8.10536 12.4804 8 12.7348 8 13C8 13.2652 8.10536 13.5196 8.29289 13.7071C8.48043 13.8946 8.73478 14 9 14H15C15.2652 14 15.5196 13.8946 15.7071 13.7071C15.8946 13.5196 16 13.2652 16 13C16 12.7348 15.8946 12.4804 15.7071 12.2929C15.5196 12.1054 15.2652 12 15 12H9ZM9 16C8.73478 16 8.48043 16.1054 8.29289 16.2929C8.10536 16.4804 8 16.7348 8 17C8 17.2652 8.10536 17.5196 8.29289 17.7071C8.48043 17.8946 8.73478 18 9 18H13C13.2652 18 13.5196 17.8946 13.7071 17.7071C13.8946 17.5196 14 17.2652 14 17C14 16.7348 13.8946 16.4804 13.7071 16.2929C13.5196 16.1054 13.2652 16 13 16H9Z" fill="white"/>
+                    </svg>
+                    <span>Đơn hàng</span>
+                </li>
+                <li class="nav-item" data-tab="users" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 0.2rem;">
+                        <path d="M10 0.5C10.862 0.5 11.6886 0.84241 12.2981 1.4519C12.9076 2.0614 13.25 2.88805 13.25 3.75C13.25 4.61195 12.9076 5.4386 12.2981 6.0481C11.6886 6.65759 10.862 7 10 7C9.13805 7 8.3114 6.65759 7.7019 6.0481C7.09241 5.4386 6.75 4.61195 6.75 3.75C6.75 2.88805 7.09241 2.0614 7.7019 1.4519C8.3114 0.84241 9.13805 0.5 10 0.5ZM3 2.75C3.29547 2.75 3.58806 2.8082 3.86104 2.92127C4.13402 3.03434 4.38206 3.20008 4.59099 3.40901C4.79992 3.61794 4.96566 3.86598 5.07873 4.13896C5.1918 4.41194 5.25 4.70453 5.25 5C5.25 5.29547 5.1918 5.58806 5.07873 5.86104C4.96566 6.13402 4.79992 6.38206 4.59099 6.59099C4.38206 6.79992 4.13402 6.96566 3.86104 7.07873C3.58806 7.1918 3.29547 7.25 3 7.25C2.70453 7.25 2.41194 7.1918 2.13896 7.07873C1.86598 6.96566 1.61794 6.79992 1.40901 6.59099C1.20008 6.38206 1.03434 6.13402 0.921271 5.86104C0.808198 5.58806 0.75 5.29547 0.75 5C0.75 4.70453 0.808198 4.41194 0.921271 4.13896C1.03434 3.86598 1.20008 3.61794 1.40901 3.40901C1.61794 3.20008 1.86598 3.03434 2.13896 2.92127C2.41194 2.8082 2.70453 2.75 3 2.75ZM0 13C0 10.7906 1.79063 9 4 9C4.4 9 4.7875 9.05937 5.15312 9.16875C4.125 10.3187 3.5 11.8375 3.5 13.5V14C3.5 14.3562 3.575 14.6937 3.70937 15H1C0.446875 15 0 14.5531 0 14V13ZM16.2906 15C16.425 14.6937 16.5 14.3562 16.5 14V13.5C16.5 11.8375 15.875 10.3187 14.8469 9.16875C15.2125 9.05937 15.6 9 16 9C18.2094 9 20 10.7906 20 13V14C20 14.5531 19.5531 15 19 15H16.2906ZM14.75 5C14.75 4.40326 14.9871 3.83097 15.409 3.40901C15.831 2.98705 16.4033 2.75 17 2.75C17.5967 2.75 18.169 2.98705 18.591 3.40901C19.0129 3.83097 19.25 4.40326 19.25 5C19.25 5.59674 19.0129 6.16903 18.591 6.59099C18.169 7.01295 17.5967 7.25 17 7.25C16.4033 7.25 15.831 7.01295 15.409 6.59099C14.9871 6.16903 14.75 5.59674 14.75 5ZM5 13.5C5 10.7375 7.2375 8.5 10 8.5C12.7625 8.5 15 10.7375 15 13.5V14C15 14.5531 14.5531 15 14 15H6C5.44687 15 5 14.5531 5 14V13.5Z" fill="white"/>
+                    </svg>
+                    <span>Người dùng</span>
+                </li>
+                <li class="nav-item" data-tab="settings" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fa-solid fa-sliders" style="margin-left: 0.2rem;"></i>
+                    <span>Cài đặt</span>
+                </li>
+            </ul>
+            <div class="logout" style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 0.1rem;">
+                    <path d="M12 4H5C4.45 4 4 4.45 4 5V19C4 19.55 4.45 20 5 20H12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 12H20.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 8.5L20.5 12L17 15.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Đăng xuất</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Tìm kiếm...">
+                </div>
+                <div class="user-info">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user">
+                        <img src="../img/techstore_menber.png" alt="Admin Avatar">
+                        <span id="user_name"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Tab -->
+            <div class="tab-content active" id="dashboard">
+                <h2>Dashboard</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon products">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Sản phẩm</h3>
+                            <p class="count" id="product-count">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orders">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Đơn hàng</h3>
+                            <p class="count" id="order-count">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon users">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Người dùng</h3>
+                            <p class="count" id="user-count">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon revenue">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Doanh thu</h3>
+                            <p class="count" id="revenue">0 ₫</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-container">
+                    <div class="recent-orders">
+                        <div class="section-header">
+                            <h3>Đơn hàng gần đây</h3>
+                            <a href="#" class="view-all" data-tab="orders">Xem tất cả</a>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Khách hàng</th>
+                                        <th>Ngày</th>
+                                        <th>Trạng thái</th>
+                                        <th>Tổng tiền</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-orders-table">
+                                    <!-- Dữ liệu sẽ được thêm bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recent-products">
+                        <div class="section-header">
+                            <h3>Sản phẩm gần đây</h3>
+                            <a href="#" class="view-all" data-tab="products">Xem tất cả</a>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Hình ảnh</th>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Danh mục</th>
+                                        <th>Giá</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-products-table">
+                                    <!-- Dữ liệu sẽ được thêm bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Tab -->
+            <div class="tab-content" id="products">
+                <div class="section-header">
+                    <h2>Quản lý sản phẩm</h2>
+                    <button class="add-btn" id="add-product-btn">
+                        <i class="fas fa-plus"></i> Thêm sản phẩm
+                    </button>
+                </div>
+                <div class="filter-container">
+                    <div class="search-filter">
+                        <input type="text" id="product-search" placeholder="Tìm kiếm sản phẩm...">
+                        <button id="product-search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="category-filter">
+                        <select id="category-filter">
+                            <option value="">Tất cả danh mục</option>
+                            <!-- Danh mục sẽ được thêm bằng JavaScript -->
+                        </select>
+                    </div>
+                    <div class="sort-filter">
+                        <select id="sort-filter">
+                            <option value="name-asc">Tên A-Z</option>
+                            <option value="name-desc">Tên Z-A</option>
+                            <option value="price-asc">Giá tăng dần</option>
+                            <option value="price-desc">Giá giảm dần</option>
+                            <option value="date-desc">Mới nhất</option>
+                            <option value="date-asc">Cũ nhất</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Hình ảnh</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Danh mục</th>
+                                <th>Thương hiệu</th>
+                                <th>Giá</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-table">
+                            <!-- Dữ liệu sẽ được thêm bằng JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination" id="products-pagination">
+                    <!-- Phân trang sẽ được thêm bằng JavaScript -->
+                </div>
+            </div>
+
+            <!-- Orders Tab -->
+            <div class="tab-content" id="orders">
+                <div class="section-header">
+                    <h2>Quản lý đơn hàng</h2>
+                </div>
+                <div class="filter-container">
+                    <div class="search-filter">
+                        <input type="text" id="order-search" placeholder="Tìm kiếm đơn hàng...">
+                        <button id="order-search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="status-filter">
+                        <select id="status-filter">
+                            <option value="">Tất cả trạng thái</option>
+                            <option value="pending">Chờ xác nhận</option>
+                            <option value="processing">Đang xử lý</option>
+                            <option value="shipping">Đang giao hàng</option>
+                            <option value="completed">Hoàn thành</option>
+                            <option value="cancelled">Đã hủy</option>
+                        </select>
+                    </div>
+                    <div class="date-filter">
+                        <input type="date" id="date-from" placeholder="Từ ngày">
+                        <input type="date" id="date-to" placeholder="Đến ngày">
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Khách hàng</th>
+                                <th>Ngày đặt</th>
+                                <th>Sản phẩm</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-table">
+                            <!-- Dữ liệu sẽ được thêm bằng JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination" id="orders-pagination">
+                    <!-- Phân trang sẽ được thêm bằng JavaScript -->
+                </div>
+            </div>
+
+            <!-- Users Tab -->
+            <div class="tab-content" id="users">
+                <h2>Quản lý người dùng</h2>
+                <!-- Nội dung quản lý người dùng -->
+            </div>
+
+            <!-- Settings Tab -->
+            <div class="tab-content" id="settings">
+                <h2>Cài đặt</h2>
+                <!-- Nội dung cài đặt -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Popups -->
+    <!-- Add/Edit Product Popup -->
+    <div class="popup" id="product-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 id="popup-title">Thêm sản phẩm mới</h3>
+                <button class="close-btn" id="close-product-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-body">
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+                    <div class="form-group">
+                        <label for="product-name">Tên sản phẩm</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-category">Danh mục</label>
+                            <select id="product-category" required>
+                                <!-- Danh mục sẽ được thêm bằng JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-brand">Thương hiệu</label>
+                            <select id="product-brand" required>
+                                <!-- Thương hiệu sẽ được thêm bằng JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-price">Giá</label>
+                            <input type="number" id="product-price" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-image">Hình ảnh URL</label>
+                            <input type="text" id="product-image" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-upload">Upload ảnh</label>
+                            <input type="file" id="product-upload" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-discount">Giảm giá (%)</label>
+                            <input type="number" id="product-discount" min="0" max="100" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-stock">Tồn kho</label>
+                            <input type="number" id="product-stock" min="0">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-rating">Đánh giá (0-5)</label>
+                            <input type="number" id="product-rating" min="0" max="5" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-reviews">Lượt đánh giá</label>
+                            <input type="number" id="product-reviews" min="0">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-warranty">Bảo hành</label>
+                            <input type="text" id="product-warranty" placeholder="ví dụ: 12 tháng">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-authentic-text">Nguồn hàng</label>
+                            <input type="text" id="product-authentic-text" placeholder="chính hãng/xách tay">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-tags">Tags</label>
+                            <input type="text" id="product-tags" placeholder="tag1, tag2, ...">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-colors">Màu sắc</label>
+                            <input type="text" id="product-colors" placeholder="Đen, Trắng, ...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-variants">Biến thể (JSON)</label>
+                        <textarea id="product-variants" rows="3" placeholder='Ví dụ: [{"ram":"6GB","rom":"64GB","price":20000000}]'></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Mô tả</label>
+                        <textarea id="product-description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-row checkbox-group">
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="product-hot">
+                            <label for="product-hot">Sản phẩm HOT</label>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="product-authentic">
+                            <label for="product-authentic">Hàng chính hãng</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Thông số kỹ thuật</label>
+                        <div class="specs-container">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="product-screen">Màn hình</label>
+                                    <input type="text" id="product-screen">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product-camera">Camera</label>
+                                    <input type="text" id="product-camera">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="product-processor">Bộ xử lý</label>
+                                    <input type="text" id="product-processor">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product-ram">RAM</label>
+                                    <input type="text" id="product-ram">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="product-storage">Bộ nhớ</label>
+                                    <input type="text" id="product-storage">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product-battery">Pin</label>
+                                    <input type="text" id="product-battery">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn" id="cancel-product">Hủy</button>
+                        <button type="submit" class="save-btn">Lưu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Detail Popup -->
+    <div class="popup" id="order-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Chi tiết đơn hàng #<span id="order-detail-id"></span></h3>
+                <button class="close-btn" id="close-order-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-body">
+                <div class="order-info">
+                    <div class="order-customer">
+                        <h4>Thông tin khách hàng</h4>
+                        <p><strong>Tên:</strong> <span id="order-customer-name"></span></p>
+                        <p><strong>Email:</strong> <span id="order-customer-email"></span></p>
+                        <p><strong>Điện thoại:</strong> <span id="order-customer-phone"></span></p>
+                        <p><strong>Địa chỉ:</strong> <span id="order-customer-address"></span></p>
+                    </div>
+                    <div class="order-status">
+                        <h4>Trạng thái đơn hàng</h4>
+                        <select id="order-status-select">
+                            <option value="Chờ xác nhận">Chờ xác nhận</option>
+                            <option value="Đang xử lý">Đang xử lý</option>
+                            <option value="Đang giao hàng">Đang giao hàng</option>
+                            <option value="Hoàn thành">Hoàn thành</option>
+                            <option value="Đã hủy">Đã hủy</option>
+                        </select>
+                        <button id="update-order-status" class="save-btn" type="button">Cập nhật</button>
+                    </div>
+                </div>
+                <div class="order-items">
+                    <h4>Sản phẩm</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody id="order-items-table">
+                            <!-- Dữ liệu sẽ được thêm bằng JavaScript -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="text-right"><strong>Tổng cộng:</strong></td>
+                                <td id="order-total"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="order-notes">
+                    <h4>Ghi chú</h4>
+                    <textarea id="order-notes-text" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" id="close-order-detail">Đóng</button>
+                    <button type="button" class="save-btn" id="save-order-notes">Lưu ghi chú</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm Delete Popup -->
+    <div class="popup" id="confirm-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Xác nhận xóa</h3>
+                <button class="close-btn" id="close-confirm-popup"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-body">
+                <div class="confirm-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Bạn có chắc chắn muốn xóa <span id="delete-item-name"></span>?</p>
+                    <p>Hành động này không thể hoàn tác.</p>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" id="cancel-delete">Hủy</button>
+                    <button type="button" class="confirm-delete" id="confirm-delete">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <div class="alert" id="alert">
+        <div class="alert-content">
+            <i class="alert-icon"></i>
+            <span class="alert-message"></span>
+        </div>
+        <button class="alert-close"><i class="fas fa-times"></i></button>
+    </div>
+    <!-- <script src="./js/function.js"></script> -->
+    <script src="./js/admin.js"></script>
+</body>
+</html>

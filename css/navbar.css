@@ -1,0 +1,378 @@
+.navbar_section {
+	background: linear-gradient(to bottom, #1c2b4b, #243b66);
+	color: white;
+}
+.categories_nav,
+.location_nav,
+.cart_nav,
+.login_nav {
+	background-color: #304572;
+	padding: 10px 12px !important;
+	border-radius: 10px;
+}
+
+.header_pc {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1200px;
+	padding: 0;
+	margin: 0 auto;
+}
+.site_logo {
+	max-width: 80px;
+	max-height: 80px;
+	overflow: hidden;
+}
+.site_logo > a img,
+.site_logo > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.site_logo > a img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+.header_pc-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: fit-content;
+	padding: 0.5rem 0.8rem;
+}
+.left_container ul li > i{
+	margin-right: 0.5rem;
+	color:#1c3d74 !important;
+} 
+.find-input_nav {
+	gap: 0;
+}
+.header_pc-item li.fa-magnifying-glass {
+	display: block;
+	padding: 10px;
+}
+.header_pc-item > .form-control {
+	border-left: none;
+}
+#categories_container {
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	gap: 10px;
+}
+#categories_container .left_container {
+	background-color: #bfd7fe;
+	padding: 1rem;
+	border-radius: 1rem;
+	padding-left: 0.5rem;
+	color:#1e478a;
+	min-width: 230px;
+	box-shadow: 0 0 10px -7px #292f39;
+}
+#categories_container .left_container ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+#categories_container .left_container ul li {
+	display: flex;
+	gap: 0.2rem;
+	align-items: center;
+	max-width: 250px;
+	position: relative;
+	padding: 10px;
+	font-size: 14px;
+}
+#categories_container .left_container ul li svg {
+	position: absolute;
+}
+#categories_container .left_container ul li::after {
+	content: "\203A";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	translate: -50% -50%;
+}
+
+#categories_container .right_container {
+	/* background-color: white; */
+	width: 100%;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	/* border-radius: 1rem; */
+	/* overflow: hidden; */
+}
+.right_container a {
+	font-size: 12px !important;
+	padding: 5px 12px;
+	border-radius: 0.5rem;
+	border: 1px solid rgba(104, 104, 104, 0.441);
+	width: fit-content;
+}
+
+
+
+
+
+/* header text banner  */
+.banner-wrapper {
+	max-width: 1200px;
+	overflow: hidden;
+	margin: auto;
+	background: #2b406f; /* nền nhẹ cho dễ nhìn */
+}
+
+.banner-list {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 2rem;
+	white-space: nowrap;
+	list-style: none;
+	padding: 0.2rem 0;
+	margin: 0;
+	animation: scrollLeft 20s linear infinite;
+}
+
+.banner-list li {
+	list-style: circle;
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 12px;
+	color: white;
+}
+
+/* Hiệu ứng chạy ngang vô tận */
+@keyframes scrollLeft {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+.header_banner-btn{
+	position: relative;
+	padding-left: 1rem;
+	color: 14px;
+}
+.header_banner-btn::before {
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	left: 0;
+	background-color: rgba(220, 220, 220, 0.625);
+	border-radius: 25px;
+}
+
+.phone-ring {          /* màu xanh lá kiểu gọi điện */
+	animation: ring 0.8s infinite;
+	transform-origin: center;
+	display: inline-block;
+}
+
+/* Hiệu ứng reng reng */
+@keyframes ring {
+	0% { transform: rotate(0); }
+	10% { transform: rotate(15deg); }
+	20% { transform: rotate(-14deg); }
+	30% { transform: rotate(17deg); }
+	40% { transform: rotate(-16deg); }
+	50% { transform: rotate(14deg); }
+	60% { transform: rotate(-12deg); }
+	70% { transform: rotate(0); }
+	100% { transform: rotate(0); }
+}
+.cart_nav{position: relative; z-index: 2;}
+.cart_nav #number{
+	position: absolute;
+	top: -10%;
+	left: 90%;
+	text-align: center;
+	background-color:#dff9e8;
+	color: #1b4c2f;
+	width: 16px;
+	overflow: hidden;
+	height: 17px;
+	border-radius: 1rem;
+}
+ul.row.small_banner{gap: 0.2rem;}
+ul.row.small_banner  li {
+	flex-shrink: unset;
+	padding: 0;
+}
+
+.slide-banner {
+	overflow: hidden; /* Ẩn phần bị trượt ra ngoài */
+	position: relative;
+}
+
+.slide-banner ul {
+	display: flex;
+	flex-wrap: nowrap;
+	animation: slideLeft 10s linear infinite;
+}
+
+.slide-banner li {
+	flex: 0 0 100%; /* mỗi ảnh chiếm toàn bộ chiều rộng container */
+}
+
+.slide-banner img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Hiệu ứng trượt ngang vô hạn */
+@keyframes slideLeft {
+	0% {
+		transform: translateX(0);
+	}
+	20% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-100%);
+	}
+	45% {
+		transform: translateX(-100%);
+	}
+	50% {
+		transform: translateX(-200%);
+	}
+	70% {
+		transform: translateX(-200%);
+	}
+	75% {
+		transform: translateX(-300%);
+	}
+	95% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.categories_sale-ads--container {
+	padding: 1rem;
+}
+.categories_sale-ads--container .title {
+	background: linear-gradient(to bottom, #1c2b4b, #243b66);
+	color: white;
+	padding: 0.6rem 1rem;
+	text-align: center;
+	border-radius: 0.5rem;
+}
+.sale_price-brand li span {
+	color: #1e478a;
+	font-size: 14px;
+	display: inline;
+
+}
+
+.sale_price-brand li span b {
+	display: inline;
+	font-weight: 700;
+}
+.member_sale-info {}
+.member_sale-info .logo{
+	max-width: 35px;
+	position: relative;
+	max-height: 35px; 
+	border: 1px solid  #1c2b4b3f;
+	border-radius: 50%;
+	padding: 0.1rem;
+	background: linear-gradient(to bottom, #5485f0, #99b5e5);
+
+}
+
+.member_sale-info .logo::after,
+.member_sale-info .logo::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border-radius: 50%;
+}
+.member_sale-info .logo::before {
+	border: 1px outset #5485f0;
+	animation: breathOutline 2s ease-in-out infinite;
+
+}
+.member_sale-info .logo::after{
+	box-sizing: unset;
+	border: 1px solid #5485f0;
+	animation: breathOutline 2s ease-in-out 1s infinite;
+}
+
+@keyframes breathOutline {
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.4);
+		opacity: 0;
+	}
+}
+
+.find_container.arrow {
+	border-left: 10px solid transparent;
+	border-top: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid rgb(255, 255, 255);
+	top: 65%;
+	left: 50%;
+	display: none;
+}
+.find_container.content-box {
+	display: flex;
+	gap: 0.5rem;
+	max-height: 1000px;
+	overflow-x: scroll;
+	min-width: 900px;
+	background-color: white;
+	min-height: 300px;
+	height: fit-content;
+	padding: 2rem;
+	z-index: 999;
+	top: 100%;
+	display: none;
+	border-radius: 5px;
+}
+#resultList {
+	display: flex;
+	gap: 0.5rem;	
+}
+
+.nav_overlay {
+	position: absolute;
+	background-color: rgba(5, 5, 5, 0.51);
+	width: 100%;
+	height: 100vh;
+	z-index: 5;
+	/* pointer-events: none; */
+	position: fixed;
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(2px);
+	z-index: 10;
+	display: none;
+}
+.find-input_nav:focus-within .find_container {
+	display: block;
+}
+
+.nav_overlay.active{
+	display: block;
+}

@@ -1,0 +1,84 @@
+.footer {
+	background-color: #0f172a;
+	color: #ffffff;
+	padding: 40px 0;
+	font-family: Arial, sans-serif;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	overflow: hidden;
+}
+
+.footer-container {
+	max-width: 1200px;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.footer-col {
+	flex: 1;
+	min-width: 200px;
+}
+
+.footer-logo {
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.footer h4 {
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #facc15; /* vàng nhấn */
+}
+
+.footer-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-links li {
+	margin-bottom: 8px;
+}
+
+.footer-links a {
+	color: #ffffff;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.footer-links a:hover {
+	color: #38bdf8; /* xanh nhạt khi hover */
+}
+
+.footer-socials {
+	margin-top: 10px;
+}
+
+.footer-socials a {
+	color: #ffffff;
+	margin-right: 12px;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+	color: #38bdf8;
+}
+
+.footer-bottom {
+	text-align: center;
+	margin-top: 30px;
+	border-top: 1px solid #334155;
+	padding-top: 20px;
+}
+
+.footer-bottom p {
+	color: #94a3b8;
+	font-size: 14px;
+}
