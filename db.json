@@ -1,0 +1,133 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 14",
+      "brand": 1,
+      "price": 20000000,
+      "discount": 5,
+      "stock": 120,
+      "category": 1,
+      "specs_id": "1",
+      "tags": ["flagship", "cao cấp"],
+      "hot": true,
+      "rating": 4.8,
+      "description": "iPhone 14 với thiết kế sang trọng, chip A15 Bionic mạnh mẽ.",
+      "variants": [
+        { "ram": "6GB", "rom": "64GB", "price": 20000000 },
+        { "ram": "8GB", "rom": "128GB", "price": 22500000 }
+      ],
+      "warranty": "12 tháng"
+    },
+    {
+      "id": "2",
+      "name": "Samsung S23",
+      "brand": 2,
+      "price": 18000000,
+      "discount": 10,
+      "stock": 95,
+      "category": 1,
+      "specs_id": "2",
+      "tags": ["flagship", "chụp đêm"],
+      "rating": 4.6,
+      "description": "Samsung Galaxy S23 màn hình Dynamic AMOLED 2X, chụp đêm xuất sắc.",
+      "variants": [
+        { "ram": "6GB", "rom": "64GB", "price": 18000000 },
+        { "ram": "8GB", "rom": "128GB", "price": 19500000 }
+      ],
+      "warranty": "18 tháng"
+    },
+    {
+      "id": "5",
+      "name": "Macbook Pro 2023",
+      "brand": 1,
+      "price": 55000000,
+      "discount": 7,
+      "stock": 40,
+      "category": 2,
+      "specs_id": "5",
+      "tags": ["cao cấp", "mỏng nhẹ"],
+      "hot": true,
+      "rating": 4.9,
+      "description": "Macbook Pro 2023 chip Apple M2 Pro, màn Liquid Retina XDR đẳng cấp.",
+      "variants": [
+        { "ram": "16GB", "rom": "512GB", "price": 55000000 },
+        { "ram": "32GB", "rom": "1TB", "price": 62000000 }
+      ],
+      "warranty": "24 tháng"
+    },
+    {
+      "id": "7",
+      "name": "Asus Zenbook",
+      "brand": 6,
+      "price": 25000000,
+      "discount": 10,
+      "stock": 70,
+      "category": 2,
+      "specs_id": "7",
+      "tags": ["mỏng nhẹ", "học tập"],
+      "hot": true,
+      "rating": 4.5,
+      "description": "Asus Zenbook thiết kế hiện đại, màn OLED sắc nét, hiệu suất tối ưu.",
+      "variants": [
+        { "ram": "8GB", "rom": "256GB", "price": 25000000 },
+        { "ram": "16GB", "rom": "512GB", "price": 28000000 }
+      ],
+      "warranty": "12 tháng"
+    }
+  ],
+  "product_specs": [
+    {
+      "screen": "6.1 inch Super Retina XDR OLED",
+      "cpu": "A15 Bionic",
+      "storage": "64/128/256GB",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "screen": "6.1 inch Dynamic AMOLED 2X",
+      "cpu": "Snapdragon 8 Gen 2 / Exynos 2300",
+      "storage": "64/128/256GB"
+    },
+    {
+      "id": "5",
+      "screen": "16 inch Liquid Retina XDR",
+      "cpu": "Apple M2 Pro",
+      "ram": "16/32/64GB"
+    },
+    {
+      "id": "7",
+      "screen": "14 inch OLED",
+      "cpu": "Intel Core i5-1335U",
+      "ram": "8/16/32GB"
+    }
+  ],
+  "categories": [
+    { "id": "1", "name": "Điện thoại" },
+    { "id": "2", "name": "Laptop" },
+    { "id": "3", "name": "Phụ kiện" }
+  ],
+  "brands": [
+    { "id": "1", "name": "Apple" },
+    { "id": "2", "name": "Samsung" },
+    { "id": "3", "name": "Xiaomi" },
+    { "id": "5", "name": "Dell" },
+    { "id": "6", "name": "Asus" }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "customerInfo": {
+        "name": "Nguyễn Văn A",
+        "email": "vana@example.com",
+        "address": "123 Đường ABC, TP.HCM"
+      },
+      "total": 20200000,
+      "status": "Đang xử lý",
+      "createdAt": "2025-10-01"
+    }
+  ],
+  "users": [
+    { "id": "1", "name": "Admin", "email": "admin@example.com", "role": "admin" }
+  ]
+}
